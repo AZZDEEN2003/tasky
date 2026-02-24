@@ -3,10 +3,10 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:tasky/theme/theme_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tasky/scerrnapp/aad_task.dart';
+import 'package:tasky/features/add_task/aad_task.dart';
 import 'dart:convert';
-import '../Widgte/Cstem_task_list.dart'; // استيراد الويدجت المشترك
-import '../savices/preferenes_manger.dart';
+import '../../Widgte/Cstem_task_list.dart'; // استيراد الويدجت المشترك
+import '../../savices/preferenes_manger.dart';
 
 class Homescerrn extends StatefulWidget {
   const Homescerrn({super.key});

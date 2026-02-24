@@ -1,7 +1,7 @@
 import 'package:tasky/Widgte/Custem_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../savices/preferenes_manger.dart';
+import '../../savices/preferenes_manger.dart';
 
 class UserDetails extends StatefulWidget {
   const UserDetails({super.key});

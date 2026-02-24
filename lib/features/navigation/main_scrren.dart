@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tasky/scerrnapp/HomeScerrn.dart';
-import 'package:tasky/scerrnapp/todo_scrren.dart';
-import 'package:tasky/scerrnapp/Profile_scrren.dart';
-import 'package:tasky/scerrnapp/complet_scrren.dart';
-import '../theme/theme_controller.dart';
+import 'package:tasky/features/home/HomeScerrn.dart';
+import 'package:tasky/features/tasks/todo_scrren.dart';
+import 'package:tasky/features/profile/Profile_scrren.dart';
+import 'package:tasky/features/tasks/complet_scrren.dart';
+import '../../theme/theme_controller.dart';
 
 class MainScrren extends StatefulWidget {
   const MainScrren({super.key});

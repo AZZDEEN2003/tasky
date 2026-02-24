@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasky/savices/preferenes_manger.dart';
-import 'package:tasky/scerrnapp/SplashScreen.dart';
+import 'package:tasky/features/welcome/SplashScreen.dart';
 import 'package:tasky/theme/Light_theme.dart';
 import 'package:tasky/theme/dark_theme.dart';
 import 'package:tasky/theme/theme_controller.dart';

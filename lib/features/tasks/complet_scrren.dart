@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import '../savices/preferenes_manger.dart';
-import '../theme/theme_controller.dart';
-import '../Widgte/Cstem_task_list.dart'; // استيراد الويدجت المشترك
+import '../../savices/preferenes_manger.dart';
+import '../../theme/theme_controller.dart';
+import '../../Widgte/Cstem_task_list.dart'; // استيراد الويدجت المشترك
 
 class CompletScrren extends StatefulWidget {
   const CompletScrren({super.key});

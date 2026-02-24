@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tasky/Widgte/Custem_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tasky/scerrnapp/main_scrren.dart';
+import 'package:tasky/features/navigation/main_scrren.dart';
 
-import '../savices/preferenes_manger.dart';
+import '../../savices/preferenes_manger.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});

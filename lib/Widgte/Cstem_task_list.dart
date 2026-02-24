@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../enume/task_item_actvion_enum.dart';
-import '../scerrnapp/aad_task.dart';
+import '../features/add_task/aad_task.dart';
 
 class CustomTaskList extends StatelessWidget {
   final bool isDone;

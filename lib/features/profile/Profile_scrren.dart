@@ -5,10 +5,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tasky/scerrnapp/wlecome.dart';
-import '../main.dart';
-import '../savices/preferenes_manger.dart';
-import '../theme/theme_controller.dart';
+import 'package:tasky/features/welcome/wlecome.dart';
+import '../../main.dart';
+import '../../savices/preferenes_manger.dart';
+import '../../theme/theme_controller.dart';
 import 'User_Details.dart';
 
 class ProfileScrren extends StatefulWidget {

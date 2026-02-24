@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tasky/scerrnapp/wlecome.dart';
-import 'package:tasky/scerrnapp/main_scrren.dart'; // استيراد الشاشة الرئيسية
+import 'package:tasky/features/welcome/wlecome.dart';
+import 'package:tasky/features/navigation/main_scrren.dart'; // استيراد الشاشة الرئيسية
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 
