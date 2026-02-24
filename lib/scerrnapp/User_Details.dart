@@ -1,5 +1,6 @@
+import 'package:tasky/Widgte/Custem_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:newprojectflutter/Widgte/Custem_screen.dart';
+
 import '../savices/preferenes_manger.dart';
 
 class UserDetails extends StatefulWidget {
@@ -11,28 +12,19 @@ class UserDetails extends StatefulWidget {
 
 class _UserDetailsState extends State<UserDetails> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  
   final TextEditingController nameController = TextEditingController();
-  final TextEditingController MotivationQuoteController = TextEditingController();
+  final TextEditingController QuoteController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _loadUserData();
+    _loadData();
   }
 
-  @override
-  void dispose() {
-    nameController.dispose();
-    MotivationQuoteController.dispose();
-    super.dispose();
-  }
-
-  void _loadUserData() async {
-    await PreferenesManger().init();
+  void _loadData() {
     setState(() {
-      nameController.text = PreferenesManger().getString('userName') ?? "";
-      MotivationQuoteController.text = PreferenesManger().getString('Motivation Quote') ?? "";
+      nameController.text = PreferenesManger().getString('userName');
+      QuoteController.text = PreferenesManger().getString('Motivation Quote');
     });
   }
 
@@ -40,80 +32,61 @@ class _UserDetailsState extends State<UserDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text(
+        title: Text(
           "User Details",
+          style: Theme.of(context).textTheme.labelLarge,
         ),
-        elevation: 0,
-        iconTheme:  IconThemeData(),
       ),
       body: SafeArea(
         child: Padding(
-          padding:  EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Form(
             key: _formKey,
             child: Column(
               children: [
-                // الجزء العلوي: الحقول قابلة للتمرير
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        CustemScreen(
-                          TextTitle: 'User Name',
-                          Controller: nameController,
-                          maxLines: 1,
-                          hint: PreferenesManger().getString('userName')!,
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter your name';
-                            }
-                            return null;
-                          },
-                        ),
-                        const SizedBox(height: 20),
-                        CustemScreen(
-                          TextTitle: 'Motivation Quote',
-                          Controller: MotivationQuoteController,
-                          maxLines: 5,
-                          hint: PreferenesManger().getString('Motivation Quote')!,
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter a Motivation Quote';
-                            }
-                            return null;
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
+                CustemScreen(
+                  TextTitle: "Full Name",
+                  Controller: nameController,
+                  maxLines: 1,
+                  hint: "e.g. Sarah Khalid",
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your name';
+                    }
+                    return null;
+                  },
                 ),
-
-                // الجزء السفلي: الزر ثابت في مكانه
                 const SizedBox(height: 16),
+                CustemScreen(
+                  TextTitle: "Motivation Quote",
+                  Controller: QuoteController,
+                  maxLines: 2,
+                  hint: "One task at a time. One step closer.",
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter a quote';
+                    }
+                    return null;
+                  },
+                ),
+                const Spacer(),
                 SizedBox(
                   width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
                     onPressed: () async {
                       if (_formKey.currentState!.validate()) {
-                        bool savedName = await PreferenesManger().setString('userName', nameController.text);
-                        bool savedQuote = await PreferenesManger().setString('Motivation Quote', MotivationQuoteController.text);
-
-                        if (savedName && savedQuote && context.mounted) {
-                          Navigator.pop(context);
-                        }
+                        await PreferenesManger().setString('userName', nameController.text);
+                        await PreferenesManger().setString('Motivation Quote', QuoteController.text);
+                        if (context.mounted) Navigator.pop(context);
                       }
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF2AD67B),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                     ),
-                    child: const Text(
-                      "Save Changes",
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
+                    child: const Text("Save Changes", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                   ),
                 ),
               ],

@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:newprojectflutter/theme/theme_controller.dart';
+import 'package:tasky/theme/theme_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:newprojectflutter/scerrnapp/aad_task.dart';
+import 'package:tasky/scerrnapp/aad_task.dart';
 import 'dart:convert';
 import '../Widgte/Cstem_task_list.dart'; // استيراد الويدجت المشترك
 import '../savices/preferenes_manger.dart';
