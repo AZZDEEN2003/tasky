@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:newprojectflutter/scerrnapp/wlecome.dart';
+import 'package:tasky/scerrnapp/wlecome.dart';
 import '../main.dart';
 import '../savices/preferenes_manger.dart';
 import '../theme/theme_controller.dart';
@@ -126,7 +126,6 @@ class _ProfileScrrenState extends State<ProfileScrren> {
               ],
             ),
           ),
-          // ... باقي الكود كما هو
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
@@ -229,7 +228,6 @@ class _ProfileScrrenState extends State<ProfileScrren> {
   }
 }
 
-// تصحيح: BuildContext context بدلاً من Context
 void showImageSourceDialog(BuildContext context, Function(XFile) selectedImage) {
   showDialog(
     context: context,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:newprojectflutter/savices/preferenes_manger.dart';
-import 'package:newprojectflutter/scerrnapp/SplashScreen.dart';
-import 'package:newprojectflutter/theme/Light_theme.dart';
-import 'package:newprojectflutter/theme/dark_theme.dart';
-import 'package:newprojectflutter/theme/theme_controller.dart';
+import 'package:tasky/savices/preferenes_manger.dart';
+import 'package:tasky/scerrnapp/SplashScreen.dart';
+import 'package:tasky/theme/Light_theme.dart';
+import 'package:tasky/theme/dark_theme.dart';
+import 'package:tasky/theme/theme_controller.dart';
 
 
 

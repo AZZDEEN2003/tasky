@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newprojectflutter/savices/preferenes_manger.dart';
+import 'package:tasky/savices/preferenes_manger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 

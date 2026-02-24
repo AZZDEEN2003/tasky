@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newprojectflutter/Widgte/Custem_screen.dart';
+import 'package:tasky/Widgte/Custem_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:newprojectflutter/scerrnapp/main_scrren.dart';
+import 'package:tasky/scerrnapp/main_scrren.dart';
 
 import '../savices/preferenes_manger.dart';
 
